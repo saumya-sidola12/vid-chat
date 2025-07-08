@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(189, 255, 83, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(189, 255, 83, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    animation: backgroundShift 10s ease-in-out infinite alternate;
+    z-index: -1;
+}
+
+@keyframes backgroundShift {
+    0% { transform: translateX(-10px) translateY(-10px); }
+    100% { transform: translateX(10px) translateY(10px); }
+}
+
+.MuiContainer-root {
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin: 20px auto !important;
+    padding: 30px !important;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.MuiAppBar-root {
+    background: linear-gradient(45deg, #bdff53, #a3e635) !important;
+    box-shadow: 0 4px 20px rgba(189, 255, 83, 0.3) !important;
+    border-radius: 15px !important;
+    margin: 30px auto !important;
+    padding: 15px 0 !important;
+    border: none !important;
+}
+
+.MuiAppBar-root .MuiTypography-h2 {
+    color: #1a1a1a !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.MuiPaper-root {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(189, 255, 83, 0.2) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+    padding: 25px !important;
+    margin: 15px !important;
+    transition: all 0.3s ease !important;
+}
+
+.MuiPaper-root:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(189, 255, 83, 0.2) !important;
+    border: 1px solid rgba(189, 255, 83, 0.4) !important;
+}
+
+video {
+    border-radius: 15px !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    border: 3px solid rgba(189, 255, 83, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(189, 255, 83, 0.3) !important;
+    border: 3px solid rgba(189, 255, 83, 0.6) !important;
+}
+
+.MuiButton-root {
+    border-radius: 15px !important;
+    padding: 12px 24px !important;
+    font-weight: bold !important;
+    text-transform: none !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.MuiButton-containedPrimary {
+    background: linear-gradient(45deg, #bdff53, #a3e635) !important;
+    color: #1a1a1a !important;
+    border: none !important;
+}
+
+.MuiButton-containedPrimary:hover {
+    background: linear-gradient(45deg, #a3e635, #84cc16) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(189, 255, 83, 0.4) !important;
+}
+
+.MuiButton-containedSecondary {
+    background: linear-gradient(45deg, #1a1a1a, #333333) !important;
+    color: white !important;
+}
+
+.MuiButton-containedSecondary:hover {
+    background: linear-gradient(45deg, #333333, #525252) !important;
+    transform: translateY(-2px);
+}
+
+.MuiTextField-root {
+    margin: 10px 0 !important;
+}
+
+.MuiOutlinedInput-root {
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(189, 255, 83, 0.5) !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(189, 255, 83, 0.8) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #bdff53 !important;
+    border-width: 2px !important;
+}
+
+.MuiInputLabel-root {
+    color: rgba(26, 26, 26, 0.7) !important;
+}
+
+.MuiOutlinedInput-input {
+    color: #1a1a1a !important;
+}
+
+.MuiTypography-h6 {
+    color: #1a1a1a !important;
+    font-weight: bold !important;
+    margin-bottom: 15px !important;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+.MuiTypography-h5 {
+    color: #1a1a1a !important;
+    font-weight: bold !important;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+.MuiTypography-body1, .MuiTypography-body2 {
+    color: rgba(26, 26, 26, 0.8) !important;
+}
+
+.MuiGrid-container {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid rgba(189, 255, 83, 0.2);
+}
+
+div[style*="display: flex"][style*="justify-content: space-around"] {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    margin: 20px auto !important;
+    border: 1px solid rgba(189, 255, 83, 0.3) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+    animation: slideIn 0.5s ease-out;
+}
+
+div[style*="display: flex"][style*="justify-content: space-around"] h1 {
+    color: #1a1a1a !important;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5) !important;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.MuiButton-root:disabled {
+    background: rgba(189, 255, 83, 0.3) !important;
+    color: rgba(26, 26, 26, 0.5) !important;
+}
+
+@media (max-width: 768px) {
+    .MuiContainer-root {
+        margin: 10px !important;
+        padding: 15px !important;
+    }
+    
+    .MuiAppBar-root {
+        margin: 20px 10px !important;
+    }
+    
+    .MuiPaper-root {
+        margin: 10px 0 !important;
+        padding: 15px !important;
+    }
+    
+    video {
+        width: 100% !important;
+        max-width: 300px !important;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #bdff53, #a3e635);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #a3e635, #84cc16);
+}
